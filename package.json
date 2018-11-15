@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/qbright/fmp-timing/issues"
   },
-  "homepage": "https://github.com/qbright/fmp-timing#readme"
+  "homepage": "https://github.com/qbright/fmp-timing#readme",
+  "devDependencies": {
+    "@babel/core": "^7.1.6",
+    "@babel/preset-env": "^7.1.6",
+    "rollup-plugin-babel": "^4.0.3"
+  }
 }
