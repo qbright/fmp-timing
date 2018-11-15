@@ -1,0 +1,19 @@
+{
+  "name": "fmp-timing",
+  "version": "1.0.0",
+  "description": "auto calculate the  fmp (first meaning paint) time without Buried",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qbright/fmp-timing.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/qbright/fmp-timing/issues"
+  },
+  "homepage": "https://github.com/qbright/fmp-timing#readme"
+}
