@@ -23,6 +23,20 @@
     return Constructor;
   }
 
+  var utils = {
+    //获取当前样式
+    getStyle: function getStyle(element, att) {
+      //特性侦测
+      if (window.getComputedStyle) {
+        //优先使用W3C规范
+        return window.getComputedStyle(element)[att];
+      } else {
+        //针对IE9以下兼容
+        return element.currentStyle[att];
+      }
+    }
+  };
+
   var START_TIME = performance && performance.timing.responseEnd;
   var IGNORE_TAG_SET = ["SCRIPT", "STYLE", "META", "HEAD", "LINK"];
   var TAG_WEIGHT_MAP = {
@@ -181,7 +195,7 @@
               t = _this4.statusCollector[_index].t;
             } else {
               //background image
-              var match = item.node.style.backgroundImage.match(/url\(\"(.*?)\"\)/);
+              var match = utils.getStyle(item.node, 'background-image').match(/url\(\"(.*?)\"\)/);
               var s;
 
               if (match && match[1]) {
@@ -265,7 +279,7 @@
         });
         var weight = TAG_WEIGHT_MAP[node.tagName] || 1;
 
-        if (weight === 1 && node.style.backgroundImage && node.style.backgroundImage !== "initial") {
+        if (weight === 1 && utils.getStyle(node, 'background-image') && utils.getStyle(node, 'background-image') !== "initial") {
           weight = TAG_WEIGHT_MAP["IMG"]; //将有图片背景的普通元素 权重设置为img
         }
 
