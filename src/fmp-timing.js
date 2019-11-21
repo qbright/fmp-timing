@@ -1,4 +1,6 @@
-const START_TIME = performance && performance.timing.fetchStart;
+import utils from './utils';
+
+const START_TIME = performance && performance.timing.responseEnd;
 
 const IGNORE_TAG_SET = ["SCRIPT", "STYLE", "META", "HEAD", "LINK"];
 
@@ -155,7 +157,8 @@ class FMPTiming {
           t = this.statusCollector[index].t;
         } else {
           //background image
-          let match = item.node.style.backgroundImage.match(/url\(\"(.*?)\"\)/);
+          let match = utils.getStyle(item.node, 'background-image').match(/url\(\"(.*?)\"\)/);
+          
           let s;
           if (match && match[1]) {
             s = match[1];
@@ -238,8 +241,8 @@ class FMPTiming {
 
     if (
       weight === 1 &&
-      node.style.backgroundImage &&
-      node.style.backgroundImage !== "initial"
+      utils.getStyle(node, 'background-image') && 
+      utils.getStyle(node, 'background-image') !== "initial"
     ) {
       weight = TAG_WEIGHT_MAP["IMG"]; //将有图片背景的普通元素 权重设置为img
     }

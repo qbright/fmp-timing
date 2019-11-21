@@ -4,7 +4,8 @@
   "description": "auto calculate the  fmp (first meaning paint) time without Buried",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx rollup -c"
   },
   "repository": {
     "type": "git",
@@ -19,6 +20,7 @@
   "devDependencies": {
     "@babel/core": "^7.1.6",
     "@babel/preset-env": "^7.1.6",
+    "rollup": "^1.16.2",
     "rollup-plugin-babel": "^4.0.3"
   }
 }
