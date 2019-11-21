@@ -1,4 +1,4 @@
-const START_TIME = performance && performance.timing.responseEnd;
+const START_TIME = performance && performance.timing.fetchStart;
 
 const IGNORE_TAG_SET = ["SCRIPT", "STYLE", "META", "HEAD", "LINK"];
 

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script>
+      var a = document.createElement("script");
+      a.setAttribute("src", "../dest/fmp-timing.js");
+      document.head.insertBefore(a, document.head.children[0]);
+    </script>
+  </head>
+
+  <body>
+    <div>
+      <div>
+        <div style="width:200px;height:300px;background:green;">
+          <div
+            style="width:400px;height:400px;;background:url('http://img4.imgtn.bdimg.com/it/u=3777326289,797648117&fm=26&gp=0.jpg')"
+          ></div>
+          <div
+            style="background:red;position:absolute;width:1000px;height:800px;"
+          ></div>
+          <div
+            style="background:blue;position:absolute;top:300px;left:300px;width:500px;height:400px;"
+          >
+            <img
+              src="http://img4.imgtn.bdimg.com/it/u=3777326289,797648117&fm=26&gp=0.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+
+        <div>
+          <img
+            src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1541500217655&di=d4829f1d16fec52ddfecbfc20e4f4e60&imgtype=0&src=http%3A%2F%2Fimg.mp.sohu.com%2Fupload%2F20170815%2Fc31de52066b745e49c1e789a92148798_th.png"
+            alt=""
+          />
+
+          <img
+            src="http://img4.imgtn.bdimg.com/it/u=3777326289,797648117&fm=26&gp=0.jpg"
+            alt=""
+          />
+        </div>
+        <div>
+          <img
+            src="http://img5.imgtn.bdimg.com/it/u=2408391392,48928179&fm=26&gp=0.jpg"
+            alt=""
+          />
+          <img
+            src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1541500268687&di=4fe766426de202c71868075731ee971c&imgtype=0&src=http%3A%2F%2Fphotos.tuchong.com%2F335565%2Fl%2F4658725.jpg"
+            alt=""
+          />
+          <img
+            src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1541500268687&di=db8947c3078226a321ffd0aea84c9bb4&imgtype=0&src=http%3A%2F%2Fimgsrc.baidu.com%2Fimage%2Fc0%253Dshijue1%252C0%252C0%252C294%252C40%2Fsign%3D5022a7eab8119313d34ef7f30d5166a2%2Fb17eca8065380cd79242cbc5ab44ad34598281bd.jpg"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+    <script>
+      setTimeout(() => {
+        var img = new Image();
+        img.src =
+          "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1541501878150&di=7728f78f17849c781ac43b92073cc8b9&imgtype=0&src=http%3A%2F%2Fs4.sinaimg.cn%2Fmw690%2F006wmg2Hzy76gSxSGCn93%26690";
+        document.body.appendChild(img);
+      }, 600);
+    </script>
+  </body>
+</html>

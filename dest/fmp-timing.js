@@ -23,7 +23,7 @@
     return Constructor;
   }
 
-  var START_TIME = performance && performance.timing.responseEnd;
+  var START_TIME = performance && performance.timing.fetchStart;
   var IGNORE_TAG_SET = ["SCRIPT", "STYLE", "META", "HEAD", "LINK"];
   var TAG_WEIGHT_MAP = {
     SVG: 2,
